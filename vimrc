@@ -144,3 +144,24 @@ nmap <silent> ;c :call ToggleCopyMode()<CR>
 vnoremap * y/\<<c-r>"\><cr>
 vnoremap # y?\<<c-r>"\><cr>
 vnoremap // y/\V<c-r>"<cr>
+
+"           Scroll Wheel = Up/Down 1 lines
+"   Shift + Scroll Wheel = Up/Down 1 page
+" Control + Scroll Wheel = Up/Down 1/2 page
+"    Meta + Scroll Wheel = Up/Down 1 line
+ noremap <ScrollWheelUp>     1<C-Y>
+ noremap <ScrollWheelDown>   1<C-E>
+ noremap <S-ScrollWheelUp>   <C-B>
+ noremap <S-ScrollWheelDown> <C-F>
+ noremap <C-ScrollWheelUp>   <C-U>
+ noremap <C-ScrollWheelDown> <C-D>
+ noremap <M-ScrollWheelUp>   <C-Y>
+ noremap <M-ScrollWheelDown> <C-E>
+inoremap <ScrollWheelUp>     <C-O>4<C-Y>
+inoremap <ScrollWheelDown>   <C-O>4<C-E>
+inoremap <S-ScrollWheelUp>   <C-O><C-B>
+inoremap <S-ScrollWheelDown> <C-O><C-F>
+inoremap <C-ScrollWheelUp>   <C-O><C-U>
+inoremap <C-ScrollWheelDown> <C-O><C-D>
+inoremap <M-ScrollWheelUp>   <C-O><C-Y>
+inoremap <M-ScrollWheelDown> <C-O><C-E>
