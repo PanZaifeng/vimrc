@@ -178,3 +178,5 @@ inoremap <C-ScrollWheelUp>   <C-O><C-U>
 inoremap <C-ScrollWheelDown> <C-O><C-D>
 inoremap <M-ScrollWheelUp>   <C-O><C-Y>
 inoremap <M-ScrollWheelDown> <C-O><C-E>
+
+vnoremap y y`]
