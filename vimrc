@@ -124,17 +124,19 @@ au BufNewFile,BufRead *.cl set filetype=c
 set noignorecase
 
 func! ToggleCopyMode()
-  let w:copymode = exists('w:copymode') ? !w:copymode : 1
+  let w:copymode = exists('w:copymode') ? !w:copymode : 1 
   if w:copymode == 1
     if has('mouse')
       set mouse-=a
     endif
     set nonumber
+    echo 'copymode=1'
   else
     if has('mouse')
       set mouse=a
     endif
     set number
+    echo 'copymode=0'
   endif
 endfunc
 
