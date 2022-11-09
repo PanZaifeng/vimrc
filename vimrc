@@ -141,6 +141,19 @@ endfunc
 ":command ToggleCopy call ToggleCopyMode()
 nmap <silent> ;c :call ToggleCopyMode()<CR>
 
+func! TogglePasteMode()
+  let w:pastemode = exists('w:pastemode') ? !w:pastemode : 1 
+  if w:pastemode == 1
+    set paste
+    echo 'pastemode=1'
+  else
+    set nopaste
+    echo 'pastemode=0'
+  endif
+endfunc
+
+nmap <silent> ;p :call TogglePasteMode()<CR>
+
 vnoremap * y/\<<c-r>"\><cr>
 vnoremap # y?\<<c-r>"\><cr>
 vnoremap // y/\V<c-r>"<cr>
