@@ -206,3 +206,4 @@ set cul
 highlight clear CursorLine
 highlight LineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=white
+highlight CursorLine ctermbg=black
