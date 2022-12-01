@@ -204,9 +204,9 @@ set ttyfast
 
 set cul 
 highlight clear CursorLine
-highlight LineNr ctermfg=darkgray
-highlight CursorLineNr ctermfg=white
-highlight CursorLine ctermbg=black
+highlight LineNr ctermfg=darkgray guifg=darkgray
+highlight CursorLineNr ctermfg=white guifg=white
+highlight CursorLine ctermbg=black guibg=black
 
 " status bar colors
 au InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
