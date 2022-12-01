@@ -182,3 +182,6 @@ inoremap <M-ScrollWheelUp>   <C-O><C-Y>
 inoremap <M-ScrollWheelDown> <C-O><C-E>
 
 vnoremap y y`]
+
+highlight Pmenu ctermbg=gray guibg=gray
+highlight PmenuSel ctermbg=lightblue guibg=lightblue
