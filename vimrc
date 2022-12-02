@@ -277,6 +277,7 @@ hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
 hi MatchParen ctermbg=darkgray guibg=darkgray
 
 autocmd FileType c,cpp,cuda setlocal equalprg=clang-format
+autocmd FileType python setlocal equalprg=black\ -q\ 2>/dev/null\ -
 nmap <A-F> gg=G
 imap <A-F> <Esc>gg=G                                                                                                                                                                                                                                          
 " for mac
