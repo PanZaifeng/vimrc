@@ -130,12 +130,14 @@ func! ToggleCopyMode()
       set mouse-=a
     endif
     set nonumber
+    set nocul
     echo 'copymode=1'
   else
     if has('mouse')
       set mouse=a
     endif
     set number
+    set cul
     echo 'copymode=0'
   endif
 endfunc
