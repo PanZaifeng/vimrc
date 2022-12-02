@@ -275,3 +275,10 @@ hi User3 ctermfg=236 ctermbg=236 guibg=#303030 guifg=#303030
 hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
 
 hi MatchParen ctermbg=darkgray guibg=darkgray
+
+autocmd FileType c,cpp,cu setlocal equalprg=clang-format
+nmap <A-F> gg=G
+imap <A-F> <Esc>gg=G                                                                                                                                                                                                                                          
+" for mac
+nmap Ï gg=G
+imap Ï <Esc>gg=G
