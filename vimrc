@@ -160,7 +160,9 @@ nmap <silent> ;p :call TogglePasteMode()<CR>
 
 vnoremap * y/\<<c-r>"\><cr>
 vnoremap # y?\<<c-r>"\><cr>
-vnoremap // y/\V<c-r>"<cr>
+" vnoremap // y/\V<c-r>"<cr>
+command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '/\')|normal! /<C-R>/<CR>
+vnoremap // y<Esc>:SS <c-r>"<cr>
 
 "           Scroll Wheel = Up/Down 1 lines
 "   Shift + Scroll Wheel = Up/Down 1 page
