@@ -200,8 +200,13 @@ highlight PmenuSel ctermbg=lightblue guibg=lightblue
 "   Ps = 4  -> steady underline.
 "   Ps = 5  -> blinking bar (xterm).
 "   Ps = 6  -> steady bar (xterm).
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[6 q\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+else
+    let &t_SI = "\e[6 q"
+    let &t_EI = "\e[2 q"
+endif
 set ttimeout
 set ttimeoutlen=1
 set ttyfast
